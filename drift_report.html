@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data Drift Report</title>
+  <style>
+    body { color: #1f2937; font: 16px/1.5 system-ui, sans-serif; margin: 2rem auto; max-width: 960px; padding: 0 1rem; }
+    h1 { margin-bottom: .25rem; }
+    .status { background: #fee2e2; border-radius: .4rem; display: inline-block; padding: .45rem .75rem; }
+    table { border-collapse: collapse; margin-top: 1.5rem; width: 100%; }
+    th, td { border-bottom: 1px solid #d1d5db; padding: .65rem; text-align: left; }
+    th { background: #f3f4f6; }
+    .meta { color: #4b5563; }
+  </style>
+</head>
+<body>
+  <h1>Data Drift Report</h1>
+  <p class="status">Drift detected</p>
+  <p class="meta">Generated 2026-10-06T17:09:34.205156+00:00 ·
+     500 reference rows · 500 current rows ·
+     significance threshold 0.05</p>
+  <table>
+    <thead><tr><th>Feature</th><th>Test</th><th>Statistic</th><th>p-value</th><th>Drift</th></tr></thead>
+    <tbody><tr><td>age</td><td>kolmogorov_smirnov</td><td>0.108</td><td>0.00583208</td><td>Yes</td></tr>
+<tr><td>monthly_spend</td><td>kolmogorov_smirnov</td><td>0.294</td><td>1.86685e-19</td><td>Yes</td></tr>
+<tr><td>support_tickets</td><td>kolmogorov_smirnov</td><td>0.342</td><td>2.569e-26</td><td>Yes</td></tr>
+<tr><td>plan</td><td>chi_square</td><td>117.948</td><td>2.44292e-26</td><td>Yes</td></tr>
+<tr><td>region</td><td>chi_square</td><td>49.5924</td><td>9.75661e-11</td><td>Yes</td></tr></tbody>
+  </table>
+</body>
+</html>

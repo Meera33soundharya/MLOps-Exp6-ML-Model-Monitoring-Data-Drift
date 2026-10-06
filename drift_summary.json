@@ -1,0 +1,50 @@
+{
+  "generated_at": "2026-10-06T17:09:34.205156+00:00",
+  "threshold": 0.05,
+  "reference_rows": 500,
+  "current_rows": 500,
+  "drifted_features": 5,
+  "drift_detected": true,
+  "features": [
+    {
+      "feature": "age",
+      "kind": "numeric",
+      "test": "kolmogorov_smirnov",
+      "statistic": 0.108,
+      "p_value": 0.005832082533064598,
+      "drift_detected": true
+    },
+    {
+      "feature": "monthly_spend",
+      "kind": "numeric",
+      "test": "kolmogorov_smirnov",
+      "statistic": 0.294,
+      "p_value": 1.8668548468713493e-19,
+      "drift_detected": true
+    },
+    {
+      "feature": "support_tickets",
+      "kind": "numeric",
+      "test": "kolmogorov_smirnov",
+      "statistic": 0.342,
+      "p_value": 2.569002299357289e-26,
+      "drift_detected": true
+    },
+    {
+      "feature": "plan",
+      "kind": "categorical",
+      "test": "chi_square",
+      "statistic": 117.94803895762043,
+      "p_value": 2.4429172979330272e-26,
+      "drift_detected": true
+    },
+    {
+      "feature": "region",
+      "kind": "categorical",
+      "test": "chi_square",
+      "statistic": 49.59241128046801,
+      "p_value": 9.756610388978456e-11,
+      "drift_detected": true
+    }
+  ]
+}
